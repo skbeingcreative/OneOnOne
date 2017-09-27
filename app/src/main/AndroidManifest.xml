@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.syberkeep.oneonone">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <service
+        android:name=".FirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+    </service>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/default_avatar"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/default_avatar"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".OneOnOne">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".StartActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".StartActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".AccountSettingsActivity" />
+        <activity
+            android:name=".StatusActivity"
+            android:parentActivityName=".AccountSettingsActivity" />
+        <activity
+            android:name=".ImageActivity"
+            android:parentActivityName=".AccountSettingsActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".UsersActivity"
+            android:parentActivityName=".MainActivity" />
+
+        <activity android:name=".ProfileActivity">
+            <intent-filter>
+                <action android:name="com.syberkeep.oneonone_TARGET_NOTIFICATION"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

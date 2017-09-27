@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.syberkeep.oneonone.ImageActivity">
+
+    <include
+        android:id="@+id/toolbar_image_activity"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/camera_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_image_activity"
+        android:layout_margin="40dp"
+        android:backgroundTint="@color/colorAccent"
+        android:padding="40dp"
+        android:src="@drawable/ic_camera" />
+
+    <ImageButton
+        android:id="@+id/gallery_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_image_activity"
+        android:layout_margin="40dp"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/colorAccent"
+        android:padding="40dp"
+        android:src="@drawable/ic_gallery" />
+
+</RelativeLayout>
